@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore USA</title>
-   <div class="color-box">
+    <div class="project-box">
+    <div class="center-inside-box">
     50 states. Endless wonders.
+    </div>
     </div>
     <p> Click the state, learn about the towns, discover the nature. That's what Explore USA is all about.</p>
     <style>
         :root {
             color-scheme: light;
-            font-family: "Libre Caslon Condensed", sans-serif;
+            font-family: "Caprasimo", sans-serif;
             color: #ffffff;
             background: #b4a755;
         }
-
+        .center-inside-box {
+        display: flex;
+        justify-content: center;   /* center left-right */
+        align-items: center;        /* center top-bottom */
+        height: 100%;               /* fill the box */
+        font-size: 60px;            /* make text big */
+        text-align: center;
+}
         .color-box {
             background-color: #ad503d;
             color: white;
