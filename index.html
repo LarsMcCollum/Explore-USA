@@ -6,18 +6,30 @@
         <title>Tiki Social Club</title>
         <style>
             body {
-            background-color: rgba(186, 106, 21, 0.77);
-        }
-        body {
-    font-family: Gravitas system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
-}
+                background-color: rgba(186, 106, 21, 0.77);
+                font-family: Gravitas, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+
+            .image-scroll {
+                max-width: 100%;
+                overflow-x: auto;
+                overscroll-behavior-x: contain;
+            }
+
+            .image-scroll img {
+                display: block;
+                width: 1968px;
+                max-width: none;
+                height: auto;
+            }
         </style>
     </head>
     <body>
         <h1 style="font-size: 100px;">TIKI SOCIAL CLUB</h1>
-    <body>
-    <img src="https://cdn.hackclub.com/01a18552-a45d-7a53-a7b5-edd760ea5be9/rs_w_1968_h_394.webp" alt="Tiki Social Club"> <size="fit" width="fit" height="fit">
-    </body>
+        <div class="image-scroll" role="region" aria-label="Scrollable Tiki Social Club image" tabindex="0">
+            <img src="https://cdn.hackclub.com/01a18552-a45d-7a53-a7b5-edd760ea5be9/rs_w_1968_h_394.webp" alt="Tiki Social Club">
+        </div>
+        <p>Scroll horizontally to see the rest of the image.</p>
         <h2>Custom carvings, art, pendants, and prints</h2>
     </body>
 </html>
