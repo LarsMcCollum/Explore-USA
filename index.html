@@ -11,9 +11,15 @@
             }
 
             .image-scroll {
-                max-width: 50%;
+                width: min(100%, 1200px);
+                margin-inline: auto;
                 overflow-x: auto;
                 overscroll-behavior-x: contain;
+                scrollbar-width: none;
+            }
+
+            .image-scroll::-webkit-scrollbar {
+                display: none;
             }
 
             .image-scroll img {
@@ -29,6 +35,18 @@
         <div class="image-scroll" role="region" aria-label="Scrollable Tiki Social Club image" tabindex="0">
             <img src="https://cdn.hackclub.com/01a18552-a45d-7a53-a7b5-edd760ea5be9/rs_w_1968_h_394.webp" alt="Tiki Social Club">
         </div>
+        <p style="text-align: center;"></p>
         <h2>Custom carvings, art, pendants, and prints</h2>
+        <script>
+            const imageScroll = document.querySelector('.image-scroll');
+
+            imageScroll.scrollLeft = (imageScroll.scrollWidth - imageScroll.clientWidth) / 2;
+            imageScroll.addEventListener('wheel', (event) => {
+                if (imageScroll.scrollWidth > imageScroll.clientWidth) {
+                    event.preventDefault();
+                    imageScroll.scrollLeft += event.deltaY || event.deltaX;
+                }
+            }, { passive: false });
+        </script>
     </body>
 </html>
